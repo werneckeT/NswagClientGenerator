@@ -2,22 +2,26 @@
 
 A .NET 8.0 command-line tool for automatically generating TypeScript API clients from ASP.NET Core projects using NSwag.
 
-## Prerequisites
+![Language](https://img.shields.io/badge/language-C%23-brightgreen)
+![Latest Release](https://img.shields.io/badge/release-v1.0.0-blue)
+![Platform](https://img.shields.io/badge/platform-win--x64-lightgrey)
 
-- .NET 8.0 SDK or later
+## Installation
+
+### Prerequisites
+
+- Windows x64
 - NSwag.ConsoleCore version 14.0.0 or later
 
-### Installing NSwag.ConsoleCore
+### Quick Start
 
+1. Download the latest release (`ClientGenerator.exe`) from [GitHub Releases](https://github.com/werneckeT/NswagClientGenerator/releases)
+2. Install NSwag.ConsoleCore:
 ```bash
-# If you have an older version, remove it first:
-dotnet tool uninstall -g nswag.consolecore
-
-# Install the latest version:
 dotnet tool install -g nswag.consolecore
 ```
 
-## Installation
+### Building from Source
 
 1. Clone this repository
 2. Build the project:
@@ -118,3 +122,18 @@ export class UserClient {
     }
 }
 ```
+
+## Releases
+
+Latest Release: [v1.0.0](https://github.com/werneckeT/NswagClientGenerator/releases/tag/v1.0.0)
+
+### Features
+- Generates strongly-typed TypeScript clients from .NET projects (.csproj) or solutions (.sln)
+- Uses NSwag (requires v14.0+) for client generation
+- Supports batch processing of multiple projects
+- Configurable output paths and file naming
+- Built for .NET 8.0
+
+### Assets
+- ClientGenerator.exe (36.3 MB) - Single-file executable
+- Source code (zip/tar.gz)
